@@ -1,13 +1,4 @@
-//$(document).ready(function () {
-  var toggle = function () {
-    var $el = $('#lamp-off');
-    if($el.hasClass('hidden')) {
-      $el.removeClass('hidden');
-    } else {
-      $el.addClass('hidden');
-    }
-  };
-
+$(document).ready(function () {
   var cutoff = function () {
     var $el = $('#lamp-off');
     $el.removeClass('hidden');
@@ -18,11 +9,11 @@
 
   setInterval(function () {
     var random = parseInt(Math.random() * 400, 10);
-    setTimeout(function () {
+    var to = setTimeout(function () {
       cutoff();
     }, random);
-
+    console.log(to);
   }, 100);
 
-//});
+});
 
